@@ -1,8 +1,11 @@
 
-const [title,setTitle] = useState("");
-const [description,setDescription] = useState("");
+import {useState} from 'react';
 
 export function CreateTodo(){
+ 
+ const [title,setTitle] = useState("");
+ const [description,setDescription] = useState("");
+    
     return <>
     <div>
       <input type="text" placeholder="title" onChange={function(e){
@@ -12,7 +15,7 @@ export function CreateTodo(){
 
       <input type="text" placeholder="description" onChange={function(e){
         const value = e.target.value;
-        setTitle(e.target.value);
+        setDescription(e.target.value);
       }}></input><br />
        
        <button onClick={()=>{
